@@ -1,0 +1,10 @@
+Musat-Burcea Adrian 332CB - APD Tema 2
+
+Flow cod:
+Threadurile citesc in paralel cele doua fisiere de intrare si salveaza comenzile si produsele in
+structuri sincronizate pentru usurinta de acces ulterior. Comenzile sunt apoi impartite in mod egal
+la threadurile de nivel 1. Fiecare thread de nivel 1 preia o comanda si apoi porneste un thread de
+nivel 2 care verifica produsele din aceasta comanda si asteapta raspunsul acestuia. Daca au fost
+livrate toate produsele, threadul de nivel 1 adauga textul "shipped" si trece la urmatoarea comanda.
+Atat pe nivelul 1 cat si pe nivelul 2, pot exista maxim P threaduri. Dupa ce toate comenzile au fost
+procesate, rezultatele sunt scrise in paralel in fisierele de iesire.
